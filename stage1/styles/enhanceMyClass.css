@@ -1,0 +1,435 @@
+﻿@charset "utf-8";
+.w{
+    width:1415px;
+    margin:auto;
+}
+/*the navagation*/
+.l-nav {
+    height: 57px;
+    border-bottom: 1px dashed #e6e7e7;
+    background-color: #ffffff;
+}
+/*导航栏主体盒子*/
+.l-nav__main {
+    height: 58px;
+}
+/*导航栏 logo*/
+.education-logo-box {
+    float: left;
+    width: 244px;
+    height: 58px;
+    text-align: center;
+    line-height: 58px;
+}
+/*导航栏网教通*/
+.education-internetEducation-box {
+    float: left;
+    width: 47px;
+    height: 58px;
+    text-align: center;
+    line-height: 58px;
+}
+/*导航栏标题栏*/
+.education-link {
+    float:left;
+    margin-left:19px;
+}
+.education-link ul li{
+    float:left;
+}
+.education-link ul li a {
+    display:block;
+    height: 42px;
+    padding:0 25px;
+    line-height:58px;
+    font-size:16px;
+    color:#333333;
+}
+.education-link ul li a:hover {
+    color: #48aef1;
+}
+/*导航栏新功能*/
+.nav-newfunction {
+    float: left;
+    height: 58px;
+    text-align: center;
+    line-height: 58px;
+    margin-left:31px;
+}
+/*导航栏搜索*/
+.nav-search {
+    float: left;
+    width: 20px;
+    height: 58px;
+    margin-left: 60px;
+}
+.nav-search button {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-top:20px;
+    background-repeat: no-repeat;
+    background: url(../images/search_btn.png);
+}
+/*用户头像*/
+.nav-userinfor {
+    float: right;
+    line-height: 58px;
+    margin-right: 80px;
+    vertical-align: middle;
+}
+.nav-userinfor__font {
+    font-size: 12px;
+    color: #9a9a9a;
+}
+/*首页区域*/
+.l-banner {
+    height: 1000px;
+    
+}
+/*侧边栏*/
+.l-sidebar {
+    float:left;  
+    width:240px;   
+}
+/*个人中心盒子*/
+.personal-info {
+    position: relative;
+    top: 27px;
+    height: 66px;
+    font-size: 20px;
+    color: #999999;
+    border-right: 1px solid #999999;
+}
+/*个人中心back图标*/
+.banner-back {
+    float: left;
+    width: 30px;
+    height: 30px;   
+    background-repeat: no-repeat;
+    background: url(../images/back_icon.png);
+}
+/*个人中心字体*/
+.banner-personal-info__font {
+    float: left;
+    margin-top: 6px;
+    margin-left: 15px;
+}
+/*个人中心矩形图片*/
+.rectangle_position {
+    float: right;
+    margin-top: 6px;
+    margin-right: 14px;
+}
+/*作业区域*/
+.homework {
+    position: relative;
+    top: 27px;
+    height: 234px;
+    width: 238px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #999999;
+}
+.homework li {
+    position: relative;
+    height: 60px;
+    cursor: pointer;
+}
+.homework li a {
+    font-size: 14px;
+        
+    color: #333333;
+}
+.homework-firstpage {
+    position: relative;
+    padding-left: 65px;
+    line-height: 60px;
+    background: url(../images/homework_firstpage.png) no-repeat 28px;
+}
+.homework-assignment {
+    position: relative;
+    padding-left: 65px;
+    line-height: 60px;
+    background: url(../images/homework-assignment.png) no-repeat 28px;
+}
+.homework-myhomework {
+    position: relative;
+    padding-left: 65px;
+    line-height: 60px;
+    background: url(../images/homework-myhomework.png) no-repeat 28px;
+}
+.homework-statistical {
+    position: relative;
+    padding-left: 65px;
+    line-height: 60px;
+    background: url(../images/homework-statistical.png) no-repeat 28px;
+}
+/*作业区域下方的侧边区域*/
+.right_boder_line {
+    position: relative;
+    top: 27px;
+    height: 670px;
+    border-right: 1px solid #999999;
+}
+
+
+ /*作业区域选中图片*/
+.homework-list li.ui-on {
+    color: #3ba8f0;
+    background: #f4f5f5;
+}
+.homework-list li.ui-on .homework-myhomework {
+    color: #3ba8f0;
+    background: url(../images/homework-myhomework.png) no-repeat 28px;
+}
+.homework-list li.ui-on::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: url(../images/homework_bar.png) repeat 0 0;
+    background-size: 100% 100%;
+    transition: width .5s;
+}
+/*主要内容头部*/
+.l-main__hd {
+    float: right;
+    width: 1140px;
+    height: 75px;
+    border-bottom: 1px solid #e6e7e7;
+}
+/*主要内容头部按件组*/
+.education-btns-group {
+    float: right;
+    margin-top:19px;
+    width:220px;
+    height:35px;
+
+}
+/*主要内容头部案件组加入班级*/
+.education-btn__join {
+    float:left;
+    width: 98px;
+    height:35px;
+    background-color: #3ca8f0;
+    font-size: 12px;
+    color: #ebf5fd;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 1px;
+}
+/*主要内容头部案件组创建班级*/
+.education-btn__creation {
+    float: right;
+    width: 98px;
+    height: 35px;
+    background-color: #3ca8f0;
+    font-size: 12px;
+    color: #ebf5fd;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 1px;
+}
+/*主要内容头部案件组标签我的班级*/
+.education-tab {
+    float: left;
+    margin-top: 41px;
+    width: 58px;
+    height: 13px;
+    font-size: 14px;
+    font-weight:bold;
+}
+.l-main__bd {
+    float: right;
+    width: 1140px;
+}
+/*行政班*/
+.education-management-class__hd {
+    color: #666666;
+    font-size:14px;
+    height:35px;
+    line-height:1.5;
+    padding-top:20px;
+}
+/*行政班列表*/
+.education-management-list{
+    padding-right:82px;
+    overflow:hidden;
+}
+/*行政班卡片*/
+.education_management-card-item {
+    float: left;
+    width: 338px;
+    height: 158px;
+    border-top: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+/*选中行政班卡片*/
+.education_management-card-item:hover{
+    border-top: 1px solid #3ca8f0;
+    border-left: 1px solid #3ca8f0;
+    border-right: 1px solid #3ca8f0;
+    border-bottom: 1px solid #3ca8f0;
+}
+/*选中行政班文字*/
+.education_management-card__tab {
+    float: right;
+    width: 183px;
+    height: 158px;
+}
+.education_management-card__tab ul{
+    margin-top:35px;
+}
+.education_management-card__tab ul li {
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #333333;
+}
+/*行政班我的班级*/
+.education_management-card__tab_myclass {
+    font-size: 14px;
+    color:#b8b8b8;
+}
+.education_management-card__tab_tutor {
+    font-size: 14px;
+    color: #b8b8b8;
+}
+/*行政班我的班主任*/
+.education_management-card__tab_tutorcontent{
+    font-weight:bold;
+}
+/*行政班学生*/
+.education_management-card__tab_student {
+    font-size: 14px;
+    color: #b8b8b8;
+}
+/*行政班图片*/
+.education_management-card__images {
+
+    float: left;
+    width: 155px;
+    height: 158px;
+}
+.education_management-card__images_tab{
+    position:relative;
+    top:32px;
+    left:30px;
+}
+/*教学班头部文字*/
+.teaching-class__hd {
+    color: #666666;
+    font-size: 14px;
+    height: 35px;
+    line-height: 1.5;
+    padding-top: 20px;
+}
+/*教学班图片排列*/
+.class-management-list {
+    padding-right: 82px;
+    width: 1080px;
+}
+/*第一个教学班图片排列*/
+.class-management-list_item__nor {
+    position: relative;
+    float: left;
+    width: 338px;
+    height: 158px;
+    margin-right: 20px;
+}
+/*第一个教学班图片设置图标*/
+.setting_icon_tab {
+    position: absolute;
+    
+    top: 15px;
+    right: 15px;
+}
+/*第一个教学班图片设关键图标*/
+.key_icon_tab {
+    position: absolute;
+    z-index: 2;
+    top: 28px;
+    left: 40px;
+}
+.class-management-list_item {
+    float: left;
+    width: 338px;
+    height: 158px;
+    margin-right: 20px;
+}
+/*教学班单个图片*/
+.class_management-card-item {
+    float: left;
+    width: 338px;
+    height: 158px;
+    border-top: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+/*教学班选中图片*/
+.class_management-card-item:hover {
+    border-top: 1px solid #3ca8f0;
+    border-left: 1px solid #3ca8f0;
+    border-right: 1px solid #3ca8f0;
+    border-bottom: 1px solid #3ca8f0;
+}
+/*教学班选中图片标签*/
+.class_management-card__tab {
+
+    float: right;
+    width: 183px;
+    height: 158px;
+}
+/*教学班选中图片中的多行文字*/
+.class_management-card__tab ul {
+    margin-top: 35px;
+}
+
+.class_management-card__tab ul li {
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #333333;
+}
+/*教学班班级*/
+.class_management-card__tab_myclass {
+    font-size: 14px;
+    color: #b8b8b8;
+}
+/*教学班班主任*/
+.class_management-card__tab_tutor {
+    font-size: 14px;
+    color: #b8b8b8;
+}
+
+.class_management-card__tab_tutorcontent {
+    font-weight: bold;
+}
+/*教学班学生*/
+.class_management-card__tab_student {
+    font-size: 14px;
+    color: #b8b8b8;
+}
+/*教学班卡片盒子*/
+.class_management-card__images {
+    position: relative;
+    float: left;
+    width: 155px;
+    height: 158px;
+}
+/*教学班卡片图片位置调整*/
+.class_management-card__images_tab {
+    position: absolute;
+    z-index: 1;
+    top: 32px;
+    left: 30px;
+}

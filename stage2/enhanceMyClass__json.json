@@ -1,0 +1,36 @@
+{
+  "1000": [
+    {
+      "class_id": 111,
+      "tutor": "张三",
+      "student_number": 12
+    },
+    {
+      "class_id": 112,
+      "tutor": "李四",
+      "student_number": 13
+    },
+    {
+      "class_id": 113,
+      "tutor": "王五",
+      "student_number": 15
+    }
+  ],
+  "2000": [
+    {
+      "class_id": 211,
+      "tutor": "张三",
+      "student_number": 13
+    },
+    {
+      "class_id": 212,
+      "tutor": "李四",
+      "student_number": 13
+    },
+    {
+      "class_id": 213,
+      "tutor": "王五",
+      "student_number": 15
+    }
+  ]
+}

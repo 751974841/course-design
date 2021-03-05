@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width-device-width" ,initial-scale-1.0>
+    <meta http-equiv="X-UA-Compatible" content=" ie=edge">
+    <title>the courses design</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/findMyClass.css" />
+
+</head>
+<body>
+    <div class="l-nav">
+        <!--导航栏主体盒子 -->
+        <div class="l-nav__main w">
+            <!--导航栏logo -->
+            <div class="education-logo-box">
+                <a href="###" title="福建省教育厅" class="fujianEducation"></a>
+                <img src="images/logo.png" style='vertical-align:middle' alt="" />
+            </div>
+            <!--导航栏网教通 -->
+            <div class="education-internetEducation-box">
+                <img src="images/internetEducation.png" style='vertical-align:middle' alt="" />
+            </div>
+            <!--导航栏链接 -->
+            <div class="education-link">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">教学管理</a></li>
+                    <li><a href="#">学习</a></li>
+                    <li><a href="#">资源超市</a></li>
+                    <li><a href="#">教育应用</a></li>
+                    <li><a href="#">新闻</a></li>
+                    <li><a href="#">名师名校</a></li>
+                </ul>
+            </div>
+            <!--导航栏新功能 -->
+            <div class="nav-newfunction">
+                <a href="###" title="新功能" class="nal-newFuction"></a>
+                <img src="images/newFuction.png" style='vertical-align:middle' alt="" />
+            </div>
+            <!--搜索 -->
+            <div class="nav-search">
+                <button></button>
+            </div>
+            <!--用户模块 -->
+            <div class="nav-userinfor">
+                <img src="images/user_infor.png" alt="" />
+                <span class="nav-userinfor__font">Coco</span>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="l-banner w">
+        <div class="l-sidebar ">
+            <div class="personal-info">
+                <div class="banner-back">
+                    <button></button>
+                </div>
+                <div class="banner-personal-info__font">个人中心</div>
+                <div class="rectangle_position">
+                    <img src="images/rectangle48.png" alt="" />
+                </div>
+
+            </div>
+            <div class="homework">
+                <ul class="homework-list">
+                    <li>
+                        <a href="#" class="homework-firstpage">首页</a>
+                    </li>
+                    <li>
+                        <a href="#" class="homework-assignment">布置作业</a>
+                    </li>
+                    <li class="ui-on">
+                        <a href="#" class="homework-myhomework">我的班级</a>
+                    </li>
+                    <li>
+                        <a href="#" class="homework-statistical">统计分析</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right_boder_line"></div>
+        </div>
+        <div class="l-main">
+            <div class="l-main__hd">
+                <ul class="education-tab">
+                    <li class="education-tab__item">我的班级</li>
+                </ul>
+                <div class="education-btns-back">
+                    <button class="education-btn__back_to_prior" id="education-btn__back_to_prior_id">返回上一级</button>
+                </div>
+            </div>
+            <div class="l-main__bd">
+                <div class="course_tile">
+                    <div class="search_box">
+                        <button id="search_btn"></button>
+                        <input type="text" id="search_value" placeholder="快捷查找" />
+
+                    </div>
+                    <span class="course_name">折纸兴趣班</span>
+
+                </div>
+                <div class="user_exhibition">
+                    <button id="btn_teachers">所有老师（12）</button>
+                    <button id="btn_students">所有学生（10）</button>
+                    <button id="btn_parents" >所有家长（10）</button>
+                </div>
+                <div class="user_exhibition_bd">
+                    
+                    <div class="user_exhibition_bd_li_box">
+                        <ul id="user_exhibition_bd_li_box_ul">
+                           
+                        </ul>
+                        <ul id="students_exhibition_bd_li_box_ul">
+                           
+                        </ul>
+                        <ul id="parents_exhibition_bd_li_box_ul">
+                           
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+    <script type="module" charset="utf-8">
+    import { readJsonFile} from "./enhanceMyClass_script.js";
+    import { findClassCard,findStudentCard,findParentCard} from "./findMyClass_script.js";
+    //读取json文件
+    readJsonFile("findMyClass__json.json", function (text) {
+        let class_id=localStorage.getItem("class_id");
+
+        let findMyClass_json_data = JSON.parse(text);
+        //json key
+        const teacher_key="teachers";
+        const student_key="students";
+        const parent_key="parents";
+        //json 读取某一个班级内容资料
+        let findMyClass_json_data_content=findMyClass_json_data[class_id];
+        console.log(findMyClass_json_data_content[teacher_key]);
+        
+        /* let findResult_findMyClass = findMyClass_json_data.find((findMyClass_json_data_obj) => {
+                   
+                   return findMyClass_json_data_obj.class_id === class_id;
+                }) */
+       /*  console.log(findResult_findMyClass); */
+            //老师卡片
+        const ul_id="user_exhibition_bd_li_box_ul";
+        const student_ul_id="students_exhibition_bd_li_box_ul";
+        const parent_ul_id="parents_exhibition_bd_li_box_ul";
+        const img_src="images/lovely_baby.png";
+        let btn_teachers=document.getElementById("btn_teachers");
+        btn_teachers.innerHTML=`所有老师（${findMyClass_json_data_content[teacher_key].length}）`;
+        let teacher_name=findMyClass_json_data_content[teacher_key][0].teacherName;
+
+        let  teacher_Subject=findMyClass_json_data_content[teacher_key][0].teacherSubject;
+        let card_1 =[];
+        card_1[0] = new findClassCard(ul_id,teacher_name,img_src,teacher_Subject);
+        document.getElementById(ul_id).style.display="block";
+        card_1[0].addFirstElementCard();
+        
+        for (let i=1;i<findMyClass_json_data_content[teacher_key].length;i++){
+            teacher_name=findMyClass_json_data_content[teacher_key][i].teacherName;
+            console.log( 'dasdsa',teacher_name);
+            teacher_Subject=findMyClass_json_data_content[teacher_key][i].teacherSubject;
+            card_1[i] = new findClassCard(ul_id,teacher_name,img_src,teacher_Subject);
+            card_1[i].addElementCard();
+        }
+        /* teacher_name=findMyClass_json_data_content[teacher_key][1].teacherName;
+        teacher_Subject=findMyClass_json_data_content[teacher_key][1].teacherSubject;
+        let card_1 = new findClassCard(ul_id,teacher_name,img_src,teacher_Subject);
+        card_1.addElementCard(); */
+        btn_teachers.addEventListener("click",()=>{
+            document.getElementById(ul_id).style.display="block";
+            document.getElementById(student_ul_id).style.display="none";
+            document.getElementById(parent_ul_id).style.display="none";
+        })
+        //创建学生卡片
+        let btn_students=document.getElementById("btn_students");
+        const student_json_data=findMyClass_json_data_content[student_key];
+        btn_students.innerHTML=`所有学生（${student_json_data.length}）`;
+        document.getElementById(student_ul_id).style.display="none";
+        let student_card=[];
+        for (let i=0;i<student_json_data.length;i++){
+                student_card[i]= new findStudentCard(student_ul_id,student_json_data[i].studentName,img_src);
+                student_card[i].addStudentElementCard();
+            }
+        btn_students.addEventListener("click",function(){
+            document.getElementById(ul_id).style.display="none";
+            document.getElementById(student_ul_id).style.display="block";
+            document.getElementById(parent_ul_id).style.display="none";
+            
+        })
+        //创建父母标签
+        let btn_parents =document.getElementById("btn_parents");
+        const parent_json_data=findMyClass_json_data_content[parent_key];
+        btn_parents.innerHTML=`所有父母（${parent_json_data.length}）`;
+        document.getElementById(parent_ul_id).style.display="none";
+        let parent_card=[];
+        for (let i=0;i<student_json_data.length;i++){
+            parent_card[i]= new findParentCard(parent_ul_id,parent_json_data[i].parent,img_src,parent_json_data[i].studentName);
+            parent_card[i].addParentElementCard();
+            }
+        btn_parents.addEventListener("click",function(){
+        document.getElementById(ul_id).style.display="none";
+        document.getElementById(student_ul_id).style.display="none";
+        document.getElementById(parent_ul_id).style.display="block";
+        
+        })
+        let education_btn=document.getElementById("education-btn__back_to_prior_id");
+        education_btn.addEventListener("click", function () {
+            window.location.href = "http://127.0.0.1:5500/enhanceMyClass.html";
+        })
+        //查找资料
+        let card_search_btn=document.getElementById("search_btn");
+        let card_search_value=document.getElementById("search_value");
+        card_search_btn .addEventListener("click", function () {
+            if(document.getElementById(ul_id).style.display==="display") {
+
+            }
+            console.log(document.getElementById(student_ul_id).style.display);
+            console.log(document.getElementById(ul_id).style.display);
+            console.log(document.getElementById(parent_ul_id).style.display);
+        }) 
+    })
+    </script>
+</body>
+</html>

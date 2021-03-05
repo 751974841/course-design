@@ -1,0 +1,103 @@
+{
+
+  "111":{
+          "teachers": [
+            {
+              "teacherName": "张三",
+              "teacherSubject": ["班主任","生物","历史","数学"]
+
+            },
+            {
+              "teacherName": "张三",
+              "teacherSubject": ["生物"]
+            },
+            {
+              "teacherName": "李四",
+              "teacherSubject": ["生物","信息技术","生物"]
+            },
+            {
+              "teacherName": "王五",
+              "teacherSubject": ["物理","信息技术","生物"]
+            }
+          ],
+          "students": [
+            {
+              "class_id": 1101,
+              "studentName": "张三"
+            },
+            {
+              "class_id": 1102,
+              "studentName": "李五"
+            },
+            {
+              "class_id": 1103,
+              "studentName": "王柳"
+            }
+          ],
+          "parents": [
+            {
+              "studentName": "张三",
+              "parent": "张爸"
+            },
+            {
+
+              "studentName": "李四",
+              "parent": "李爸"
+            },
+            {
+              "studentName": "王柳",
+              "parent": "王爸"
+            }
+          ]
+        },
+  "112":{
+    "teachers": [
+      {
+        "teacherName": "张四",
+        "teacherSubject": ["班主任","生物","信息技术","数学","数学","数学","数学","数学","数学"]
+
+      },
+      {
+        "teacherName": "张四",
+        "teacherSubject": ["管理员","信息技术","生物","数学","数学","数学","数学"]
+      },
+      {
+        "teacherName": "李五",
+        "teacherSubject": ["化学"]
+      },
+      {
+        "teacherName": "王六",
+        "teacherSubject":["物理"] 
+      }
+    ],
+    "students": [
+      {
+        "class_id": 1101,
+        "studentName": "张四"
+      },
+      {
+        "class_id": 1102,
+        "studentName": "李六"
+      },
+      {
+        "class_id": 1103,
+        "studentName": "王七"
+      }
+    ],
+    "parents": [
+      {
+        "studentName": "张四",
+        "parent": "张爸"
+      },
+      {
+
+        "studentName": "李六",
+        "parent": "李爸"
+      },
+      {
+        "studentName": "王七",
+        "parent": "王爸"
+      }
+    ]
+  }
+}

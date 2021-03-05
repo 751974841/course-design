@@ -1,0 +1,376 @@
+﻿@charset "utf-8";
+.w{
+    width:1415px;
+    margin:auto;
+}
+/*the navagation*/
+.l-nav {
+    height: 57px;
+    border-bottom: 1px dashed #e6e7e7;
+    background-color: #ffffff;
+}
+/*导航栏主体盒子*/
+.l-nav__main {
+    height: 58px;
+}
+/*导航栏 logo*/
+.education-logo-box {
+    float: left;
+    width: 244px;
+    height: 58px;
+    text-align: center;
+    line-height: 58px;
+}
+/*导航栏网教通*/
+.education-internetEducation-box {
+    float: left;
+    width: 47px;
+    height: 58px;
+    text-align: center;
+    line-height: 58px;
+}
+/*导航栏标题栏*/
+.education-link {
+    float:left;
+    margin-left:19px;
+}
+.education-link ul li{
+    float:left;
+}
+.education-link ul li a {
+    display:block;
+    height: 42px;
+    padding:0 25px;
+    line-height:58px;
+    font-size:16px;
+    color:#333333;
+}
+.education-link ul li a:hover {
+    color: #48aef1;
+}
+/*导航栏新功能*/
+.nav-newfunction {
+    float: left;
+    height: 58px;
+    text-align: center;
+    line-height: 58px;
+    margin-left:31px;
+}
+/*导航栏搜索*/
+.nav-search {
+    float: left;
+    width: 20px;
+    height: 58px;
+    margin-left: 60px;
+}
+.nav-search button {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-top:20px;
+    background-repeat: no-repeat;
+    background: url(../images/search_btn.png);
+}
+/*用户头像*/
+.nav-userinfor {
+    float: right;
+    line-height: 58px;
+    margin-right: 80px;
+    vertical-align: middle;
+}
+.nav-userinfor__font {
+    font-size: 12px;
+    color: #9a9a9a;
+}
+/*首页区域*/
+.l-banner {
+    height: 1000px;
+    
+}
+/*侧边栏*/
+.l-sidebar {
+    float:left;  
+    width:240px;   
+}
+/*个人中心盒子*/
+.personal-info {
+    position: relative;
+    top: 27px;
+    height: 66px;
+    font-size: 20px;
+    color: #999999;
+    border-right: 1px solid #999999;
+}
+/*个人中心back图标*/
+.banner-back {
+    float: left;
+    width: 30px;
+    height: 30px;   
+    background-repeat: no-repeat;
+    background: url(../images/back_icon.png);
+}
+/*个人中心字体*/
+.banner-personal-info__font {
+    float: left;
+    margin-top: 6px;
+    margin-left: 15px;
+}
+/*个人中心矩形图片*/
+.rectangle_position {
+    float: right;
+    margin-top: 6px;
+    margin-right: 14px;
+}
+/*作业区域*/
+.homework {
+    position: relative;
+    top: 27px;
+    height: 234px;
+    width: 238px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #999999;
+}
+.homework li {
+    position: relative;
+    height: 60px;
+    cursor: pointer;
+}
+.homework li a {
+    font-size: 14px;
+        
+    color: #333333;
+}
+.homework-firstpage {
+    position: relative;
+    padding-left: 65px;
+    line-height: 60px;
+    background: url(../images/homework_firstpage.png) no-repeat 28px;
+}
+.homework-assignment {
+    position: relative;
+    padding-left: 65px;
+    line-height: 60px;
+    background: url(../images/homework-assignment.png) no-repeat 28px;
+}
+.homework-myhomework {
+    position: relative;
+    padding-left: 65px;
+    line-height: 60px;
+    background: url(../images/homework-myhomework.png) no-repeat 28px;
+}
+.homework-statistical {
+    position: relative;
+    padding-left: 65px;
+    line-height: 60px;
+    background: url(../images/homework-statistical.png) no-repeat 28px;
+}
+/*作业区域下方的侧边区域*/
+.right_boder_line {
+    position: relative;
+    top: 27px;
+    height: 670px;
+    border-right: 1px solid #999999;
+}
+
+
+ /*作业区域选中图片*/
+.homework-list li.ui-on {
+    color: #3ba8f0;
+    background: #f4f5f5;
+}
+.homework-list li.ui-on .homework-myhomework {
+    color: #3ba8f0;
+    background: url(../images/homework-myhomework.png) no-repeat 28px;
+}
+.homework-list li.ui-on::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: url(../images/homework_bar.png) repeat 0 0;
+    background-size: 100% 100%;
+    transition: width .5s;
+}
+/*主要内容头部*/
+.l-main__hd {
+    float: right;
+    width: 1140px;
+    height: 75px;
+    border-bottom: 1px solid #e6e7e7;
+}
+/*主要内容头部案件组*/
+.education-btns-back {
+    float: right;
+    margin-top: 19px;
+    width: 100px;
+    height: 35px;
+}
+/*主要内容头部案件组加入班级*/
+.education-btn__back_to_prior {
+    float: right;
+    width: 100px;
+    height: 35px;
+    background-color: #3ca8f0;
+    font-size: 12px;
+    color: #ebf5fd;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 1px;
+}
+/*主要内容头部案件组标签我的班级*/
+.education-tab {
+    float: left;
+    margin-top: 41px;
+    width: 58px;
+    height: 13px;
+    font-size: 14px;
+}
+
+/*主要内容主体表格盒子*/
+.l-main__bd{
+    float:left;
+    margin-left:34px;
+    width:550px;
+    height:388px;
+}
+/*主题盒子标题*/
+.education-create-class_font {
+    height: 55px;
+    line-height: 55px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei"
+}
+.education-create-class_name {
+    color: #3ba8f0;
+    font-family: "Microsoft YaHei"
+}
+.education-create-class-info li {
+    height:35px;
+    font-size: 14px;
+    color: #7a7a7a;
+    margin-bottom:20px;
+}
+/*主要内容类型和退出权限的list高度*/
+#radio_type {
+    height: 15px;
+}
+#radio_type > label {
+    height: 15px;
+    line-height: 15px;
+}
+
+.education-create-class-info li label {
+    display: inline-block;
+    height: 35px;
+    width: 116px;
+    line-height: 35px;
+    text-align: right;
+}
+.typename {
+    height: 15px;
+}
+.shcoolgrade{
+    top:10px;
+}
+.shcoolgrade:before {
+    content: '*';
+    color: red;
+    margin-right: 11px;
+}
+.gradename:before {
+    content: '*';
+    color: red;
+    margin-right: 11px;
+}
+.classname:before {
+    content: '*';
+    color: red;
+    margin-right: 11px;
+}
+/*学校的文本框默认输入样式*/
+.input_shcool_name {
+    width: 398px;
+    height: 35px;
+    border: 1px solid #dddddd;
+    margin-left: 34px;
+    
+}
+/* Chrome/Opera/Safari */
+::-webkit-input-placeholder {
+    color: #bbbbbb;
+    font-size: 14px;
+    padding-left:8px;
+}
+/*班级文本框的默认输入样式*/
+.input_class_name {
+    width: 398px;
+    height: 34px;
+    border: 1px solid #dddddd;
+    margin-left: 34px;
+}
+/*班级下拉框的默认输入样式*/
+.selection_type {
+    float:right;
+    position:relative;
+    width: 398px;
+    height: 34px;
+    border: 1px solid #dddddd;
+    margin-left: 34px; 
+}
+.selection_type select {
+    width: 100%;
+    height: 34px;
+    line-height: 15px;
+    font-size: 14px;
+    -webkit-appearance: none;
+    padding-left: 10px;
+}
+.selection_type:after {
+    content: "";
+    width: 14px;
+    height: 8px;
+    background: url(../images/arrow_down.png) no-repeat center;
+    position: absolute;
+    pointer-events: none;
+    right: 8px;
+    top: 15px;
+}
+input[type=radio] {
+    height:15px;
+    margin-left: 31px;
+}
+/*单选按钮文字样式*/
+.education-create-class-info>li>span{
+    margin-left:10px;
+}
+/*单选按钮样式*/
+#need_quit {
+    margin-left: 18px;
+}
+/*单选按钮样式*/
+#forbidden_quit {
+    margin-left: 18px;
+}
+.saving_btn_box {
+    float: left;
+    margin-left: 148px;
+    width: 100px;
+    height: 35px;
+}
+.saving_btn {
+    float: right;
+    width: 100px;
+    height: 35px;
+    background-color: #3ca8f0;
+    font-size: 12px;
+    color: #ebf5fd;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 1px;
+}

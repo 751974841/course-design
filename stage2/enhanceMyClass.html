@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width-device-width" ,initial-scale-1.0>
+    <meta http-equiv="X-UA-Compatible" content=" ie=edge">
+    <title>the courses design</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/enhanceMyClass.css" />
+    
+</head>
+<body>
+    <div class="l-nav">
+        <!--导航栏主体盒子 -->
+        <div class="l-nav__main w">
+            <!--导航栏logo -->
+            <div class="education-logo-box">
+                <a href="###" title="福建省教育厅" class="fujianEducation"></a>
+                <img src="images/logo.png" style='vertical-align:middle' alt="" />
+            </div>
+            <!--导航栏网教通 -->
+            <div class="education-internetEducation-box">
+                <img src="images/internetEducation.png" style='vertical-align:middle' alt="" />
+            </div>
+            <!--导航栏链接 -->
+            <div class="education-link">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">教学管理</a></li>
+                    <li><a href="#">学习</a></li>
+                    <li><a href="#">资源超市</a></li>
+                    <li><a href="#">教育应用</a></li>
+                    <li><a href="#">新闻</a></li>
+                    <li><a href="#">名师名校</a></li>
+                </ul>
+            </div>
+            <!--导航栏新功能 -->
+            <div class="nav-newfunction">
+                <a href="###" title="新功能" class="nal-newFuction"></a>
+                <img src="images/newFuction.png" style='vertical-align:middle' alt="" />
+            </div>
+            <!--搜索 -->
+            <div class="nav-search">
+                <button></button>
+            </div>
+            <!--用户模块 -->
+            <div class="nav-userinfor">
+                <img src="images/user_infor.png" alt=""/>
+                <span class="nav-userinfor__font">Coco</span>
+            </div>
+            
+        </div>
+
+    </div>
+    <div class="l-banner w">
+        <div class="l-sidebar ">
+            <div class="personal-info">
+                <div class="banner-back">
+                    <button></button>
+                </div>
+                <div class="banner-personal-info__font">个人中心</div>
+                <div class="rectangle_position">
+                    <img src="images/rectangle48.png" alt="" />
+                </div>
+
+            </div>
+            <div class="homework">
+                <ul class="homework-list">
+                    <li >
+                        <a href="#" class="homework-firstpage">首页</a>
+                    </li>
+                    <li>
+                        <a href="#" class="homework-assignment">布置作业</a>
+                    </li>
+                    <li class="ui-on">
+                        <a href="#" class="homework-myhomework">我的班级</a>
+                    </li>
+                    <li>
+                        <a href="#" class="homework-statistical">统计分析</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right_boder_line"></div>
+        </div>
+        <div class="l-main">
+            <div class="l-main__hd">
+                <div class="education-btns-group">
+                    <button class="education-btn__join">加入班级</button>
+                    <button class="education-btn__creation" id="id_education-btn__creation">创建班级</button>
+                </div>
+                <div class="education-tab">
+                    我的班级
+                </div>
+
+            </div>
+            <div class="l-main__bd">
+                <p class="education-management-class__hd">行政班是为了学生管理和教学管理而设置的班级</p>
+                <ul class="education-management-list" id="education-management-list__id">
+
+                </ul>
+                <p class="teaching-class__hd">教学班是根据课程教学要求而设置的班级</p>
+                <ul class="class-management-list" id="class-management-list__id">
+                   
+                   
+
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+    <script type="module" charset="utf-8">
+        import { readJsonFile, creatationCard } from "./enhanceMyClass_script.js";
+
+
+        
+        //读取json文件
+        readJsonFile("enhanceMyClass__json.json", function (text) {
+            
+            let enhanceMyClass_json_data = JSON.parse(text);
+            //数据库数据administrator
+            console.log(enhanceMyClass_json_data[1000]);
+            //用户保存的数据
+            let createMyClass_data = window.localStorage;
+            console.log(window.localStorage);
+            let administrator_card=[];
+            //查找2个相同class——id
+            let createMyClass_administrator_data = JSON.parse(createMyClass_data.getItem("administrator"));
+            console.log(createMyClass_data);
+            for (const createMyClass_administrator_data_obj of createMyClass_administrator_data ){
+                let findResult_administrator = enhanceMyClass_json_data[1000].find((enhanceMyClass_json_data_obj) => {
+                   
+                   return enhanceMyClass_json_data_obj.class_id === createMyClass_administrator_data_obj.class_id;
+                })
+                
+                if(findResult_administrator=== undefined){
+                    //alert("你保存的信息，行政班缺失导师和学生人数");
+                    const ccd=new creatationCard("education-management-list__id", `${createMyClass_administrator_data_obj.phase_studying}-2020`, createMyClass_administrator_data_obj.class_name,"", "", "images/education_icon.png",createMyClass_administrator_data_obj.class_id);
+                    administrator_card.push(ccd);
+                }
+                else{
+                    const ccd=new creatationCard("education-management-list__id", `${createMyClass_administrator_data_obj.phase_studying}-2020`, createMyClass_administrator_data_obj.class_name,findResult_administrator.tutor, findResult_administrator.student_number, "images/education_icon.png",createMyClass_administrator_data_obj.class_id);
+                    administrator_card.push(ccd);
+                }
+
+            }
+            //创建行政班卡片
+            administrator_card.forEach(element=>element.addElementCard());
+            
+            console.log(administrator_card);
+
+            //教学班卡片
+            let createMyClass_educator_data = JSON.parse(createMyClass_data.getItem("educator"));
+            let education_card=[];
+            for (const createMyClass_educator_data_obj of createMyClass_educator_data ){
+                let findResult_administrator = enhanceMyClass_json_data[2000].find((enhanceMyClass_json_data_obj) => {
+                   
+                   return enhanceMyClass_json_data_obj.class_id === createMyClass_educator_data_obj.class_id;
+                })
+                
+                if(findResult_administrator=== undefined){
+                    //alert("你保存的信息，教学班缺失导师和学生人数");
+                    const ccd=new creatationCard("class-management-list__id", `${createMyClass_educator_data_obj.phase_studying}-2020`, createMyClass_educator_data_obj.class_name,"", "", "images/education_icon.png",createMyClass_educator_data_obj.class_id);
+                    education_card.push(ccd);
+                }
+                else{
+                    const ccd=new creatationCard("class-management-list__id", `${createMyClass_educator_data_obj.phase_studying}-2020`, createMyClass_educator_data_obj.class_name,findResult_administrator.tutor, findResult_administrator.student_number, "images/education_icon.png",createMyClass_educator_data_obj.class_id);
+                    education_card.push(ccd);
+                }
+
+            }
+            console.log(education_card);
+            education_card[0].addElementIcon("images/Settings_icon.png" ,"images/key_icon.png" );
+            const education_index=education_card.slice(1,education_card.length);
+            education_index.forEach(element=>element.addElementCard());
+        });
+        let education_btn=document.getElementById("id_education-btn__creation");
+        education_btn.addEventListener("click", function () {
+            window.location.href = "http://127.0.0.1:5500/createMyClass.html";
+        })
+    </script>
+</body>
+</html>

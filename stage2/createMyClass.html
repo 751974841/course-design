@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width-device-width" ,initial-scale-1.0>
+    <meta http-equiv="X-UA-Compatible" content=" ie=edge">
+    <title>the courses design</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/createMyClass.css" />
+
+</head>
+
+<body>
+    <div class="l-nav">
+        <!--导航栏主体盒子 -->
+        <div class="l-nav__main w">
+            <!--导航栏logo -->
+            <div class="education-logo-box">
+                <a href="###" title="福建省教育厅" class="fujianEducation"></a>
+                <img src="images/logo.png" style='vertical-align:middle' alt="" />
+            </div>
+            <!--导航栏网教通 -->
+            <div class="education-internetEducation-box">
+                <img src="images/internetEducation.png" style='vertical-align:middle' alt="" />
+            </div>
+            <!--导航栏链接 -->
+            <div class="education-link">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">教学管理</a></li>
+                    <li><a href="#">学习</a></li>
+                    <li><a href="#">资源超市</a></li>
+                    <li><a href="#">教育应用</a></li>
+                    <li><a href="#">新闻</a></li>
+                    <li><a href="#">名师名校</a></li>
+                </ul>
+            </div>
+            <!--导航栏新功能 -->
+            <div class="nav-newfunction">
+                <a href="###" title="新功能" class="nal-newFuction"></a>
+                <img src="images/newFuction.png" style='vertical-align:middle' alt="" />
+            </div>
+            <!--搜索 -->
+            <div class="nav-search">
+                <button></button>
+            </div>
+            <!--用户模块 -->
+            <div class="nav-userinfor">
+                <img src="images/user_infor.png" alt="" />
+                <span class="nav-userinfor__font">Coco</span>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="l-banner w">
+        <div class="l-sidebar ">
+            <div class="personal-info">
+                <div class="banner-back">
+                    <button></button>
+                </div>
+                <div class="banner-personal-info__font">个人中心</div>
+                <div class="rectangle_position">
+                    <img src="images/rectangle48.png" alt="" />
+                </div>
+
+            </div>
+            <div class="homework">
+                <ul class="homework-list">
+                    <li>
+                        <a href="#" class="homework-firstpage">首页</a>
+                    </li>
+                    <li>
+                        <a href="#" class="homework-assignment">布置作业</a>
+                    </li>
+                    <li class="ui-on">
+                        <a href="#" class="homework-myhomework">我的班级</a>
+                    </li>
+                    <li>
+                        <a href="#" class="homework-statistical">统计分析</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right_boder_line"></div>
+        </div>
+        <div class="l-main">
+            <div class="l-main__hd">
+                <ul class="education-tab">
+                    <li class="education-tab__item">我的班级</li>
+                </ul>
+                <div class="education-btns-back">
+                    <button class="education-btn__back_to_prior" id="back_to_prior">返回上一级</button>
+                </div>
+            </div>
+            <div class="l-main__bd">
+                <h3 class="education-create-class_font">
+                    尊敬的
+                    <span class="education-create-class_name">老师（刘老师)</span>
+                    , 请填写班级信息：
+                </h3>
+                <ul class="education-create-class-info">
+                    <li><label class="shcoolname">学校</label><input class="input_shcool_name" id="input_shcoolname"
+                            type="text" placeholder="请选中学习" /></li>
+                    <li>
+                        <label class="shcoolgrade">学段</label>
+                        <div class="dropdown">
+
+                            <button class="dropbtn" id="drop_btn_school">请选择学段</button>
+                            <div class="dropdown-content" id="dropdown_content_school">
+                                <ul>
+                                    <li>小学</li>
+                                    <li>初中</li>
+                                    <li>高中</li>
+                                    <li>大学</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="gradename">年级</label>
+                        <div class="dropdown">
+
+                            <button class="dropbtn" id="drop_btn_class">请选择年级</button>
+                            <div class="dropdown-content" id="dropdown_content_class">
+                                <ul>
+                                    <li>一年级</li>
+                                    <li>二年级</li>
+                                    <li>三年级</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li><label class="classname">班级名</label><input class="input_class_name" id="class_name" type="text"
+                            placeholder="请输入班级名称，限20个字符，不支持输入_和%" maxlength="20" /></li>
+                    <li class="radio_type" id="radio_class_type">
+                        <label class="typename">类型</label>
+                        <button class="class_type" value="行政班"></button><span>行政班</span>
+                        <button class="class_type" value="教学班"></button><span>教学班</span>
+                    </li>
+                    <li class="radio_type" id="radio_right_type">
+                        <label class="quit_right_settings">退出权限设置</label>
+                        <button class="class_type" value="允许退出"></button><span>允许退出</span>
+                        <button class="class_type" value="通过班级管理员审核后退出"
+                            id="need_quit"></button><span>通过班级管理员审核后退出</span>
+                        <button class="class_type" value="禁止退出" id="forbidden_quit"></button><span>禁止退出</span>
+                    </li>
+                </ul>
+                <div class="saving_btn_box">
+                    <button class="saving_btn" id="saving_btn_id">保存</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script type="module" charset="utf-8">
+
+        import { creatationClass, checkStorage } from "./createMyClass_script.js";
+        //选择器
+        let btn_slect = document.getElementsByClassName("education-create-class-info")[0].getElementsByTagName("button");
+        let li_slect = ["dropdown_content_school", "dropdown_content_class"]
+        function open_url_enhance_class() {
+            window.location.href = "http://127.0.0.1:5500/enhanceMyClass.html";
+        }
+        function displaySelection(id) {
+            let li_selection = document.getElementById(li_slect[id]);
+            li_selection.addEventListener("mouseleave", () => { li_selection.style.display = "none" }, false);
+            li_selection.style.display = "block";
+            let li_selection_id = li_selection.getElementsByTagName("li");
+            for (const element of li_selection_id) {
+                element.addEventListener("click", () => {
+                    btn_slect[id].innerHTML = element.innerHTML;
+                }, false)
+            }
+            li_selection.removeEventListener("mouseleave", () => { li_selection.style.display = "none" }, false);
+
+        }
+        for (let i = 0; i < btn_slect.length; i++) {
+
+            btn_slect[i].addEventListener("click", function () {
+                displaySelection(i)
+            }, false);
+        }
+        //单选
+        let radio_class_btn = document.getElementById("radio_class_type").getElementsByTagName("button");
+        let radio_right_btn = document.getElementById("radio_right_type").getElementsByTagName("button");
+        //当用户按下保存按钮时，单选按钮目前的的值
+        let cur_radio_class_btn_value = "";
+        let cur_radio_right_btn_value = "";
+        let cur_class_mark = 0;
+        let cur_right_mark = 1;
+        function change_pic(radio_btn, radio_id) {
+            for (let key of radio_btn) {
+                key.style.backgroundImage = "url(images/non_selection.png)";
+            }
+            radio_btn[radio_id].style.backgroundImage = "url(images/has_selection.png)";
+
+            return radio_btn[radio_id].value;
+        }
+        function radio_function(radio_btn, cur_value, cur_mark) {
+            for (let i = 0; i < radio_btn.length; i++) {
+
+                radio_btn[i].addEventListener("click", function () {
+
+                    change_pic(radio_btn, i);
+
+                    cur_mark == 0 ? cur_radio_class_btn_value = change_pic(radio_btn, i) : cur_radio_right_btn_value = change_pic(radio_btn, i);
+                }, false);
+            }
+
+        }
+
+        radio_function(radio_class_btn, cur_radio_class_btn_value, cur_class_mark);
+        radio_function(radio_right_btn, cur_radio_right_btn_value, cur_right_mark);
+        //获取保存按钮
+        let saving_btn = document.getElementById("saving_btn_id");
+        let back_to_prior_btn = document.getElementById("back_to_prior");
+        let creat_class_administrator_arr = [];
+        let creat_class_educator_arr = [];
+        //之前在localStorage创建班级的数据读取
+
+        if (checkStorage()) {
+            //creat_class_type_arr.push(JSON.parse(window.localStorage)["行政班卡片"]);
+            //window.localStorage.clear();
+            // console.log(JSON.parse(window.localStorage)["administrator"]);
+            if (window.localStorage["administrator"])
+                creat_class_administrator_arr = JSON.parse(window.localStorage["administrator"]);
+
+            if (window.localStorage["educator"])
+                creat_class_educator_arr = JSON.parse(window.localStorage["educator"]);
+        }
+        //行政班数组
+        back_to_prior_btn.addEventListener("click", () => open_url_enhance_class(), false);
+        //cs.checkShcoolName();
+
+        //点击保存按钮
+        saving_btn.addEventListener("click", function () {
+            let class_id;
+            cur_radio_class_btn_value == "行政班" ? class_id = creat_class_administrator_arr.length + 1 : class_id = creat_class_educator_arr.length + 1;
+            //console.log(cur_radio_class_btn_value);
+            //获取学校输入值
+            let shcool_name = document.getElementById("input_shcoolname").value;
+            //获取学段输入值
+            let phase_studying = document.getElementById("drop_btn_school").innerHTML;
+            //获取年级输入值
+            let grade = document.getElementById("drop_btn_class").innerHTML;
+            //获取班级名
+            let class_name = document.getElementById("class_name").value;
+            let cs = new creatationClass(class_id, shcool_name, phase_studying, grade, class_name, cur_radio_class_btn_value, cur_radio_right_btn_value);
+            //console.log(cs);
+            if (cs.checkShcoolName(cs.shcool_name) == true) document.getElementById("input_shcoolname").value = cs.shcool_name;
+            let condition_phase_studing = "请选择学段";
+            let condition_grade = "请选择年级";
+
+            if (cs.checkType() == false) radio_class_btn[0].style.backgroundImage = "url(images/has_selection.png)";
+            if (cs.checkRight() == false) radio_right_btn[0].style.backgroundImage = "url(images/has_selection.png)";
+            //完全符合要求后跳转页面
+            if (cs.checkPhaseStuding(condition_phase_studing) && cs.checkGrade(condition_grade) && cs.checkClassName()) {
+
+                let json;
+                //判断行政班还是教学班
+                if (!window.localStorage) {
+                    alert("浏览器支持localstorage");
+                    return false;
+                } else {
+                    //定位数据库key
+                    let phase_studyingMap = new Map();
+                    phase_studyingMap.set("小学", 1);
+                    phase_studyingMap.set("初中", 2);
+                    phase_studyingMap.set("高中", 3);
+                    phase_studyingMap.set("大学", 4);
+                    let phase_studying_number = phase_studyingMap.get(cs.phase_studying);
+                    console.log(phase_studying_number);
+                    let gradeMap = new Map();
+                    gradeMap.set("一年级", 1);
+                    gradeMap.set("二年级", 2);
+                    gradeMap.set("三年级", 3);
+                    let grade_number = gradeMap.get(cs.grade);
+                    console.log(grade_number);
+                    //cs.changeClassID();
+
+
+                    //添加创建班级资料
+                    if (cs.class_type == "行政班") {
+                        cs.changeClassID(100 + phase_studying_number * 10 + grade_number * 1);
+                        creat_class_administrator_arr.push(cs);
+                        json = JSON.stringify(creat_class_administrator_arr, null, 2);
+                        localStorage.setItem("administrator", json);
+                    } else {
+                        cs.changeClassID(200 + phase_studying_number * 10 + grade_number * 1);
+                        creat_class_educator_arr.push(cs);
+                        json = JSON.stringify(creat_class_educator_arr, null, 2);
+                        localStorage.setItem("educator", json);
+                    };
+                }
+
+            }
+           open_url_enhance_class();
+        }, false);
+        //跳转我的班级页面
+        console.log(window.localStorage);
+       //window.localStorage.clear();
+    </script>
+</body>
+
+</html>

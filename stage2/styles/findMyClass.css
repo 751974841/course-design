@@ -1,0 +1,424 @@
+﻿@charset "utf-8";
+
+.w {
+    width: 1415px;
+    margin: auto;
+}
+/*the navagation*/
+.l-nav {
+    height: 57px;
+    border-bottom: 1px dashed #e6e7e7;
+    background-color: #ffffff;
+}
+/*导航栏主体盒子*/
+.l-nav__main {
+    height: 58px;
+}
+/*导航栏 logo*/
+.education-logo-box {
+    float: left;
+    width: 244px;
+    height: 58px;
+    text-align: center;
+    line-height: 58px;
+}
+/*导航栏网教通*/
+.education-internetEducation-box {
+    float: left;
+    width: 47px;
+    height: 58px;
+    text-align: center;
+    line-height: 58px;
+}
+/*导航栏标题栏*/
+.education-link {
+    float: left;
+    margin-left: 19px;
+}
+
+    .education-link ul li {
+        float: left;
+    }
+
+        .education-link ul li a {
+            display: block;
+            height: 42px;
+            padding: 0 25px;
+            line-height: 58px;
+            font-size: 16px;
+            color: #333333;
+        }
+
+            .education-link ul li a:hover {
+                color: #48aef1;
+            }
+/*导航栏新功能*/
+.nav-newfunction {
+    float: left;
+    height: 58px;
+    text-align: center;
+    line-height: 58px;
+    margin-left: 31px;
+}
+/*导航栏搜索*/
+.nav-search {
+    float: left;
+    width: 20px;
+    height: 58px;
+    margin-left: 60px;
+}
+
+    .nav-search button {
+        float: left;
+        width: 20px;
+        height: 20px;
+        margin-top: 20px;
+        background-repeat: no-repeat;
+        background: url(../images/search_btn.png);
+    }
+/*用户头像*/
+.nav-userinfor {
+    float: right;
+    line-height: 58px;
+    margin-right: 80px;
+    vertical-align: middle;
+}
+
+.nav-userinfor__font {
+    font-size: 12px;
+    color: #9a9a9a;
+}
+/*首页区域*/
+.l-banner {
+    height: 1000px;
+}
+/*侧边栏*/
+.l-sidebar {
+    float: left;
+    width: 240px;
+}
+/*个人中心盒子*/
+.personal-info {
+    position: relative;
+    top: 27px;
+    height: 66px;
+    font-size: 20px;
+    color: #999999;
+    border-right: 1px solid #999999;
+}
+/*个人中心back图标*/
+.banner-back {
+    float: left;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background: url(../images/back_icon.png);
+}
+/*个人中心字体*/
+.banner-personal-info__font {
+    float: left;
+    margin-top: 6px;
+    margin-left: 15px;
+}
+/*个人中心矩形图片*/
+.rectangle_position {
+    float: right;
+    margin-top: 6px;
+    margin-right: 14px;
+}
+/*作业区域*/
+.homework {
+    position: relative;
+    top: 27px;
+    height: 234px;
+    width: 238px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #999999;
+}
+
+    .homework li {
+        position: relative;
+        height: 60px;
+        cursor: pointer;
+    }
+
+        .homework li a {
+            font-size: 14px;
+            color: #333333;
+        }
+
+.homework-firstpage {
+    position: relative;
+    padding-left: 65px;
+    line-height: 60px;
+    background: url(../images/homework_firstpage.png) no-repeat 28px;
+}
+
+.homework-assignment {
+    position: relative;
+    padding-left: 65px;
+    line-height: 60px;
+    background: url(../images/homework-assignment.png) no-repeat 28px;
+}
+
+.homework-myhomework {
+    position: relative;
+    padding-left: 65px;
+    line-height: 60px;
+    background: url(../images/homework-myhomework.png) no-repeat 28px;
+}
+
+.homework-statistical {
+    position: relative;
+    padding-left: 65px;
+    line-height: 60px;
+    background: url(../images/homework-statistical.png) no-repeat 28px;
+}
+/*作业区域下方的侧边区域*/
+.right_boder_line {
+    position: relative;
+    top: 27px;
+    height: 670px;
+    border-right: 1px solid #999999;
+}
+
+
+/*作业区域选中图片*/
+.homework-list li.ui-on {
+    color: #3ba8f0;
+    background: #f4f5f5;
+}
+
+    .homework-list li.ui-on .homework-myhomework {
+        color: #3ba8f0;
+        background: url(../images/homework-myhomework.png) no-repeat 28px;
+    }
+
+    .homework-list li.ui-on::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        background: url(../images/homework_bar.png) repeat 0 0;
+        background-size: 100% 100%;
+        transition: width .5s;
+    }
+/*主要内容头部*/
+.l-main__hd {
+    float: right;
+    width: 1140px;
+    height: 75px;
+    border-bottom: 1px solid #e6e7e7;
+}
+/*主要内容头部案件组*/
+.education-btns-back {
+    float: right;
+    margin-top: 19px;
+    width: 100px;
+    height: 35px;
+}
+/*主要内容头部案件组标签我的班级*/
+.education-tab {
+    float: left;
+    margin-top: 41px;
+    width: 58px;
+    height: 13px;
+    font-size: 14px;
+}
+/*主要内容头部案件组加入班级*/
+.education-btn__back_to_prior {
+
+    width: 100px;
+    height: 35px;
+    background-color: #3ca8f0;
+    font-size: 12px;
+    color: #ebf5fd;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 1px;
+}
+
+/*主要内容主体表格盒子*/
+.l-main__bd {
+    float: left;
+    margin-left: 34px;
+    width: 1140px;
+    height: 794px;
+}
+.course_tile {
+    float: left;
+    width: 1140px;
+    height: 97px;
+    border-bottom: 1px solid #e6e7e7;
+}
+.course_name {
+    color: #333333;
+    float:right;
+    line-height: 97px;
+    font-size: 20px;
+    display:block;
+    margin-right:218px;
+    font-weight:bold;
+}
+/*搜索框盒子*/
+.search_box {
+    float: right;
+    width: 300px;
+    height: 36px;
+    margin-top: 30px;
+    border: 1px solid #3ba8f0;
+}
+    .search_box button {
+        float: right;
+        height: 36px;
+        width: 50px;
+        background: url(../images/search_box_btn.png) repeat 0 0;
+    }
+    .search_box input {
+        float: right;
+        height: 36px;
+        width: 250px;
+        text-indent: 10px;
+    }
+.user_exhibition {
+    float: right;
+    width: 1140px;
+    height: 35px;
+    background-color: #f5f5f5;
+}
+    .user_exhibition button {
+        float: left;
+        width: 180px;
+        height: 35px;
+        background-color: #f5f5f5;
+    }
+        .user_exhibition button:hover {
+            background-color: #3ca8f0;
+            color: #ffffff;
+        }
+        .user_exhibition button:active {
+            background-color: #ffffff;
+            color: #3ca8f0;
+        }
+.user_exhibition_bd {
+    float: right;
+    width: 1140px;
+    height: 661px;
+   
+}
+.user_exhibition_bd_li_box {
+    float: right;
+    width: 1108px;
+    margin-left:30px;
+    margin-top:22px;
+
+}
+    .user_exhibition_bd_li_box li {
+        position:relative;
+        float: left;
+        width: 136px;
+        height: 152px;
+        margin-left:20px;
+        margin-bottom: 24px;
+        border: 1px solid #dddddd;
+    }
+    .user_exhibition_bd_li_box li img{
+        width:100%;
+    }
+    .user_exhibition_bd_li_box li h4 {
+        height:36px;
+        font-size:16px;
+        line-height:36px;
+        font-weight:bold;
+    }
+.courses_tutor {
+    position: relative;
+    width: 137px;
+    height: 115px;
+}
+.teacher_tag {
+    position: absolute;
+     
+    height: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 12px;
+    color: #ffffff;
+    line-height: 20px;
+    text-align: center;
+
+
+    background-color: #f99d43;
+}
+.administer_tag {
+    position: absolute;
+    float: left;
+    width: 47px;
+    height: 20px;
+    font-size: 12px;
+    color: #ffffff;
+    line-height: 20px;
+    text-align: center;
+    top: 95px;
+    left: 90px;
+    background-color: #fa4b5b;
+}
+.teacher_tag_three {
+    float: left;
+    width: 47px;
+    height: 20px;
+    margin-top:8px;
+    margin-left:5px;
+    font-size: 12px;
+    color: #ffffff;
+    line-height: 20px;
+    text-align: center;
+    background-color: #f96543;
+}
+.teacher_tag_two {
+    float: left;
+    width: 35px;
+    height: 20px;
+    font-size: 12px;
+    color: #ffffff;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 7px;
+    margin-left: 5px;
+    background-color: #f99d43;
+}
+.teacher_tag_four {
+    float: left;
+    width: 62px;
+    height: 20px;
+    font-size: 12px;
+    color: #ffffff;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 8px;
+    margin-left: 5px;
+    background-color: #f99d43;
+}
+.teacher_tag_five {
+    float: left;
+    width: 72px;
+    height: 20px;
+    font-size: 12px;
+    color: #ffffff;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 8px;
+    margin-left: 5px;
+    background-color: #f99d43;
+}
+#administer_teacher_tag {
+    left: 25px;
+}
+.students_exhibition_bd_li_box_ul{
+    display: none;
+}

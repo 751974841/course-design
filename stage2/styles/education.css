@@ -1,0 +1,7 @@
+@charset "utf-8";
+/*the navagation*/
+.l-nav {
+    height: 58px;
+    border-bottom: 12px dashed #ffffff;
+    background-color:#ff8500;
+}

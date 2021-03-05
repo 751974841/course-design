@@ -1,0 +1,48 @@
+﻿
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>修改Li的值</title>
+    <script type="text/javascript">
+        function gel(id) {
+            return document.getElementById(id);
+        }
+
+        //全局的input输入控制
+        var inpt = document.createElement("input");
+        inpt.setAttribute("type", "text");
+
+        inpt.onblur = function () {
+            //alert("tet");
+            this.parentElement.innerHTML = inpt.value;
+        };
+
+        window.onload = function () {
+            var lis = gel("ulList").childNodes;
+            for (var i = 0; i < lis.length; i++) {
+                if (lis[i].nodeType == 1) {
+                    lis[i].ondblclick = function () {
+                        //删除文本
+                        inpt.value = this.innerHTML;
+                        this.removeChild(this.firstChild);
+                        this.appendChild(inpt);
+                        //获取焦点
+                        inpt.focus();
+                        //在inpt这个控件失去焦点的时候，也要绑定一个事件,把inpt中的文本值返回给当前li
+                        //编写inpt.onblur
+                    };
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+    <ul id="ulList">
+        <li>北京</li>
+        <li>山西</li>
+        <li>上海</li>
+        <li>天津</li>
+        <li>河南</li>
+    </ul>
+</body>

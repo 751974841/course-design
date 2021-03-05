@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width-device-width" ,initial-scale-1.0>
+    <meta http-equiv="X-UA-Compatible" content=" ie=edge">
+    <title>the courses design</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/createMyClass.css" />
+    
+</head>
+<body>
+    <div class="l-nav">
+        <!--导航栏主体盒子 -->
+        <div class="l-nav__main w">
+            <!--导航栏logo -->
+            <div class="education-logo-box">
+                <a href="###" title="福建省教育厅" class="fujianEducation"></a>
+                <img src="images/logo.png" style='vertical-align:middle' alt="" />
+            </div>
+            <!--导航栏网教通 -->
+            <div class="education-internetEducation-box">
+                <img src="images/internetEducation.png" style='vertical-align:middle' alt="" />
+            </div>
+            <!--导航栏链接 -->
+            <div class="education-link">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">教学管理</a></li>
+                    <li><a href="#">学习</a></li>
+                    <li><a href="#">资源超市</a></li>
+                    <li><a href="#">教育应用</a></li>
+                    <li><a href="#">新闻</a></li>
+                    <li><a href="#">名师名校</a></li>
+                </ul>
+            </div>
+            <!--导航栏新功能 -->
+            <div class="nav-newfunction">
+                <a href="###" title="新功能" class="nal-newFuction"></a>
+                <img src="images/newFuction.png" style='vertical-align:middle' alt="" />
+            </div>
+            <!--搜索 -->
+            <div class="nav-search">
+                <button></button>
+            </div>
+            <!--用户模块 -->
+            <div class="nav-userinfor">
+                <img src="images/user_infor.png" alt="" />
+                <span class="nav-userinfor__font">Coco</span>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="l-banner w">
+        <div class="l-sidebar ">
+            <div class="personal-info">
+                <div class="banner-back">
+                    <button></button>
+                </div>
+                <div class="banner-personal-info__font">个人中心</div>
+                <div class="rectangle_position">
+                    <img src="images/rectangle48.png" alt="" />
+                </div>
+
+            </div>
+            <div class="homework">
+                <ul class="homework-list">
+                    <li>
+                        <a href="#" class="homework-firstpage">首页</a>
+                    </li>
+                    <li>
+                        <a href="#" class="homework-assignment">布置作业</a>
+                    </li>
+                    <li class="ui-on">
+                        <a href="#" class="homework-myhomework">我的班级</a>
+                    </li>
+                    <li>
+                        <a href="#" class="homework-statistical">统计分析</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right_boder_line"></div>
+        </div>
+        <div class="l-main">
+            <div class="l-main__hd">
+                <ul class="education-tab">
+                    <li class="education-tab__item">我的班级</li>
+                </ul>
+                <div class="education-btns-back">
+                    <button class="education-btn__back_to_prior">返回上一级</button>
+                </div>
+            </div>
+            <div class="l-main__bd">
+                <h3 class="education-create-class_font">
+                    尊敬的
+                    <span class="education-create-class_name">老师（刘老师)</span>
+                    , 请填写班级信息：
+                </h3>
+                <ul class="education-create-class-info">
+                    <li><label class="shcoolname">学校</label><input class="input_shcool_name" type="text" placeholder="请选中学习" /></li>
+                    <li>
+                        <label class="shcoolgrade">学段</label>
+                        <div class="dropdown">
+
+                            <button class="dropbtn" id="drop_btn_school">请选择学段</button>
+                            <div class="dropdown-content" id="dropdown_content_school" >
+                                <ul >
+                                    <li >小学</li>
+                                    <li >初中</li>
+                                    <li >高中</li>
+                                    <li >大学</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="gradename">年级</label>
+                        <div class="dropdown">
+
+                            <button class="dropbtn" id="drop_btn_class">请选择年级</button>
+                            <div class="dropdown-content" id="dropdown_content_class">
+                                <ul>
+                                    <li>一年级</li>
+                                    <li>二年级</li>
+                                    <li>三年级</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li><label class="classname">班级名</label><input class="input_class_name" type="text" placeholder="请输入班级名称，限20个字符，不支持输入_和%" /></li>
+                    <li class="radio_type" id="radio_class_type">
+                        <label class="typename">类型</label>
+                        <button class="class_type"></button><span>行政班</span>
+                        <button class="class_type"></button><span>教学班</span>
+                    </li>
+                    <li class="radio_type" id="radio_right_type">
+                        <label class="quit_right_settings">退出权限设置</label>
+                        <button class="class_type"></button><span>允许退出</span>
+                        <button class="class_type" id="need_quit" ></button><span>通过班级管理员审核后退出</span>
+                        <button class="class_type" id="forbidden_quit"></button><span>禁止退出</span>
+                    </li>
+                </ul>
+                <div class="saving_btn_box">
+                    <button class="saving_btn">保存</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        //选择器
+        let btn_slect = document.getElementsByClassName("education-create-class-info")[0].getElementsByTagName("button");
+        let li_slect = ["dropdown_content_school", "dropdown_content_class"]
+        function displaySelection(id) {
+            let li_selection = document.getElementById(li_slect[id]);
+            li_selection.addEventListener("mouseleave", () => { li_selection.style.display = "none" }, false);
+            li_selection.style.display = "block";
+            let li_selection_id = li_selection.getElementsByTagName("li");
+            for (const element of li_selection_id) {
+                    element.addEventListener("click", () => {
+                        btn_slect[id].innerHTML = element.innerHTML;
+                }, false)
+            }
+
+        }
+        for (let i = 0; i < btn_slect.length; i++) {
+            
+            btn_slect[i].addEventListener("click", function () {
+                displaySelection(i)
+            }, false);
+        }
+        //单选
+        let radio_class_btn = document.getElementById("radio_class_type").getElementsByTagName("button");
+        let radio_right_btn = document.getElementById("radio_right_type").getElementsByTagName("button");
+        console.log(radio_class_btn);
+        function change_pic(radio_btn, radio_id) {
+            for (let key of radio_btn) {
+                key.style.backgroundImage = "url(images/non_selection.png)";
+            }
+            radio_btn[radio_id].style.backgroundImage = "url(images/has_selection.png)";
+        }
+        function radio_function(radio_btn) {
+            for (let i = 0; i < radio_btn.length; i++) {
+
+                radio_btn[i].addEventListener("click", function () {
+                    console.log(1);    
+                    change_pic(radio_btn, i)
+                }, false);
+            }
+
+        }
+        radio_function(radio_class_btn);
+        radio_function(radio_right_btn);
+        
+
+            
+    </script>
+</body>
+</html>

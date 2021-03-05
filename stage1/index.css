@@ -1,0 +1,33 @@
+﻿.selectBoxs {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    line-height: 20px;
+    position: absolute;
+    top: 119px;
+    z-index: 19920829;
+    border-radius: 3px;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+    width: 100%;
+    color: #989898;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    display: none;
+}
+
+.status_circle {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #30cc80;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+.status_circle_hide {
+    background-color: orange;
+}
